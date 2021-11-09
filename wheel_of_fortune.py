@@ -52,7 +52,6 @@ class WOFHumanPlayer(WOFPlayer):
     def getMove(self, category, obscuredPhrase, guessed):
 
         print("{} has (${})".format(self.name,self.prizeMoney))
-
         print("Category:",category)
         print("Phrase:",obscuredPhrase)
         print("Guessed:",guessed)
@@ -71,26 +70,26 @@ class WOFComputerPlayer(WOFPlayer):
         WOFPlayer.__init__(self, name)
         self.difficulty = difficulty
 
+         
     """.smartCoinFlip(): This method will help us decide semi-randomly whether to make a “good” or “bad” move. 
         A higher difficulty should make us more likely to make a “good” move. 
         Implement this by choosing a random number between 1 and 10 using random.randint(1, 10) (see above) 
         and returning True if that random number is greater than self.difficulty. 
         If the random number is less than or equal to self.difficulty, return False.
     """
-
     def smartCoinFlip(self):
-        random_difficulty = random.randint(1, 10)
+        randomDifficulty = random.randint(1, 10)
 
-        if random_difficulty > self.difficulty:
+        if randomDifficulty > self.difficulty:
             return True        
         else:
             return False
     
+   
     """ getPossibleLetters(guessed): This method should return a list of letters that can be guessed.
         These should be characters that are in LETTERS ('ABCDEFGHIJKLMNOPQRSTUVWXYZ') but not in the guessed parameter.
         Additionally, if this player doesn’t have enough prize money to guess a vowel (variable VOWEL_COST set to 250), 
         then vowels (variable VOWELS set to 'AEIOU') should not be included"""
-
     def getPossibleLetters(self, guessed):
         VOWEL_COST = 250
         VOWELS = 'AEIOU'
@@ -108,6 +107,7 @@ class WOFComputerPlayer(WOFPlayer):
         
         return canBeGuessed
 
+      
     """ .getMove(category, obscuredPhrase, guessed): Should return a valid move.
         Use the .getPossibleLetters(guessed) method described above.
         If there aren’t any letters that can be guessed (this can happen if the only letters left to guess are vowels and the player doesn’t have enough for vowels), return 'pass'
