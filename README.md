@@ -1,5 +1,5 @@
 # Wheel_of_Fortune_using_Python
-## The first three classes are my solutions for the Final Project for Course 4 -Python Classes and Inheritance offered by *University of Michigan through Coursera*
+## The first three classes are my solutions for the Final Project for Course 4 -Python Classes and Inheritance offered by *University of Michigan through Coursera.*
 
 ## Part A: WOFPlayer
 
