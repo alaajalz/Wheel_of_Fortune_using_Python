@@ -43,8 +43,6 @@ class WOFPlayer:
 
 
 # PASTE YOUR WOFHumanPlayer CLASS (from part B) HERE
-
-
 class WOFHumanPlayer(WOFPlayer):
     def __init__(self, name):
         WOFPlayer.__init__(self, name)
@@ -62,7 +60,6 @@ class WOFHumanPlayer(WOFPlayer):
 
 
 # PASTE YOUR WOFComputerPlayer CLASS (from part C) HERE
-
 class WOFComputerPlayer(WOFPlayer):
     SORTED_FREQUENCIES = 'ZQXJKVBPYGFWMUCLDRHSNIOATE'
     
@@ -134,7 +131,6 @@ class WOFComputerPlayer(WOFPlayer):
             else:
                 randLetter = random.choice(canBeGuessed)
                 return randLetter
-            
 
 
 # Repeatedly asks the user for a number between min & max (inclusive)
